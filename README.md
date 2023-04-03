@@ -7,7 +7,7 @@
 ## Requirement Checklist
 
 - [ ] 1. Movie recycler view:
-    - [ x ] 1.1. Create a Movie class with the structure specified in movie.json (provided on Moodle)
+    - [x] 1.1. Create a Movie class with the structure specified in movie.json (provided on Moodle)
     - [ ] 1.2. Obtain and fill data (minimum of 4 movies)
         - [ ] 1.2.1. Obtain relevant movie data from Vue (https://www.myvue.com/cinema/dublin/whats-on) or your favourite provider and add data credits at the bottom of the app
         - [ ] 1.2.2. Generate a random number between 0 and 15 for each movie and assign to seats_remaining
