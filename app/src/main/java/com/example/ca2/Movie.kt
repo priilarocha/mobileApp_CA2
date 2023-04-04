@@ -5,7 +5,7 @@ data class Movie (
     val image: String,
     val certification: String,
     val description: String,
-    var starring: Array<String>,
+    var starring: String,
     var running_time_mins: Int,
     var seats_remaining: Int,
     var seats_selected: Int = 0
