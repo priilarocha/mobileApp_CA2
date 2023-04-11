@@ -1,4 +1,6 @@
-package com.example.ca2
+package com.example.ca2.network
+
+import com.squareup.moshi.Json
 
 data class Movie (
     val title: String,
@@ -7,6 +9,6 @@ data class Movie (
     val plot: String,
     var stars: String,
     var runtimeStr: String,
-//    var seats_remaining: Int,
-//    var seats_selected: Int = 0
+    var seats_remaining: Int,
+    var seats_selected: Int = 0
 )
