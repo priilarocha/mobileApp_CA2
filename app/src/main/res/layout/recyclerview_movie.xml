@@ -13,7 +13,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/ic_launcher_background"
+        android:contentDescription="This is the image of the movie" />
 
     <TextView
         android:id="@+id/movieTitleTextView"
@@ -81,5 +82,39 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/movieSeatsRemainingTextView"
         app:srcCompat="@drawable/baseline_chair_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addSeatsButton"
+        android:layout_width="19dp"
+        android:layout_height="20dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/movieSeatsImageView"
+        app:layout_constraintStart_toEndOf="@id/movieSeatsSelected"
+        app:layout_constraintEnd_toStartOf="@id/movieSeatsImageView"
+        app:layout_constraintTop_toTopOf="@id/movieSeatsImageView"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/baseline_add_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/subSeatsButton"
+        android:layout_width="19dp"
+        android:layout_height="20dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@id/movieSeatsSelected"
+        app:layout_constraintTop_toTopOf="@id/movieSeatsSelected"
+        app:layout_constraintEnd_toStartOf="@id/movieSeatsSelected"
+        app:srcCompat="@android:drawable/btn_minus" />
+
+    <TextView
+        android:id="@+id/movieSeatsSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/addSeatsButton"
+        app:layout_constraintStart_toEndOf="@+id/subSeatsButton"
+        app:layout_constraintTop_toTopOf="@id/addSeatsButton"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

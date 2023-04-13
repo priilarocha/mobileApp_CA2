@@ -22,7 +22,7 @@ class MovieAdaptor(private val moviesArray: Array<Movie>) : RecyclerView.Adapter
             holder.movieTitleTextView.text = moviesArray[position].title
 //            holder.movieStarNameTextView.text = moviesArray[position].stars
 //            holder.movieTimeValueTextView.text = moviesArray[position].runtimeStr.toString()
-//            holder.movieSeatsRemainingTextView.text = moviesArray[position].seats_remaining.toString()
+            holder.movieSeatsRemainingTextView.text = moviesArray[position].seats_remaining.toString()
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
