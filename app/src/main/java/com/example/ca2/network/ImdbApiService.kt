@@ -1,5 +1,6 @@
 package com.example.ca2.network
 
+import com.example.ca2.Movie
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit

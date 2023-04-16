@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CA2</string>
+    <string name="seats_selected">%1$d Seats Selected: </string>
+    <string name="seats_remaining">%1$d Seats Remaining:</string>
+    <string name="sold_out">Sold out</string>
+    <string name="movieImageDescription">This is the image of the movie</string>
+    <string name="title">Title</string>
+    <string name="movieCertification">R</string>
+    <string name="copyright">Data provided by IMDB</string>
 </resources>

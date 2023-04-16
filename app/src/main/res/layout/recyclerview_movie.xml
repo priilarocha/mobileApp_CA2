@@ -6,7 +6,7 @@
     android:layout_height="335dp">
 
     <ImageView
-        android:id="@+id/movieImageView"
+        android:id="@+id/movieImage"
         android:layout_width="match_parent"
         android:layout_height="240dp"
         android:scaleType="centerCrop"
@@ -14,107 +14,77 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_background"
-        android:contentDescription="This is the image of the movie" />
+        android:contentDescription="@string/movieImageDescription" />
 
     <TextView
-        android:id="@+id/movieTitleTextView"
+        android:id="@+id/movieTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/title"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/movieImageView"/>
-
-    <ImageView
-        android:id="@+id/movieCertificationImageView"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        app:layout_constraintTop_toBottomOf="@+id/movieImageView"
-        app:layout_constraintStart_toEndOf="@id/movieTitleTextView"
-        app:srcCompat="@drawable/baseline_star_rate_24" />
+        app:layout_constraintTop_toBottomOf="@id/movieImage"/>
 
     <TextView
-        android:id="@+id/movieStarTextView"
+        android:id="@+id/movieCert"
+        android:text="@string/movieCertification"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/movieTitle"
+        app:layout_constraintBottom_toBottomOf="@id/movieTitle"/>
+
+    <TextView
+        android:id="@+id/movieStar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Starring: "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/movieTitleTextView"/>
+        app:layout_constraintTop_toBottomOf="@id/movieTitle"/>
 
     <TextView
-        android:id="@+id/movieStarNameTextView"
+        android:id="@+id/movieStarName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Robert Downey Jr."
-        app:layout_constraintStart_toEndOf="@id/movieStarTextView"
-        app:layout_constraintTop_toBottomOf="@id/movieTitleTextView"/>
+        app:layout_constraintStart_toEndOf="@id/movieStar"
+        app:layout_constraintTop_toBottomOf="@id/movieTitle"/>
 
     <TextView
-        android:id="@+id/movieTimeTextView"
+        android:id="@+id/movieTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Running time "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/movieStarTextView"/>
+        app:layout_constraintTop_toBottomOf="@id/movieStar"/>
 
     <TextView
-        android:id="@+id/movieTimeValueTextView"
+        android:id="@+id/movieTimeValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="1h 30m"
-        app:layout_constraintStart_toEndOf="@id/movieTimeTextView"
-        app:layout_constraintTop_toBottomOf="@id/movieStarNameTextView"/>
+        app:layout_constraintBottom_toBottomOf="@+id/movieTime"
+        app:layout_constraintStart_toEndOf="@id/movieTime"
+        app:layout_constraintTop_toTopOf="@id/movieTime" />
 
     <TextView
-        android:id="@+id/movieSeatsRemainingTextView"
+        android:id="@+id/movieSeatsRemaining"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Seats Remaining"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/movieImageView"
+        app:layout_constraintTop_toBottomOf="@id/movieStarName"
         app:layout_constraintVertical_bias="0.9" />
     
     <ImageView
-        android:id="@+id/movieSeatsImageView"
+        android:id="@+id/movieSeatsImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/movieSeatsRemainingTextView"
+        app:layout_constraintBottom_toBottomOf="@id/movieSeatsRemaining"
+        app:layout_constraintEnd_toStartOf="@id/movieSeatsRemaining"
+        app:layout_constraintTop_toTopOf="@id/movieSeatsRemaining"
         app:srcCompat="@drawable/baseline_chair_24" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/addSeatsButton"
-        android:layout_width="19dp"
-        android:layout_height="20dp"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="@id/movieSeatsImageView"
-        app:layout_constraintStart_toEndOf="@id/movieSeatsSelected"
-        app:layout_constraintEnd_toStartOf="@id/movieSeatsImageView"
-        app:layout_constraintTop_toTopOf="@id/movieSeatsImageView"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/baseline_add_24" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/subSeatsButton"
-        android:layout_width="19dp"
-        android:layout_height="20dp"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="@id/movieSeatsSelected"
-        app:layout_constraintTop_toTopOf="@id/movieSeatsSelected"
-        app:layout_constraintEnd_toStartOf="@id/movieSeatsSelected"
-        app:srcCompat="@android:drawable/btn_minus" />
-
-    <TextView
-        android:id="@+id/movieSeatsSelected"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@id/addSeatsButton"
-        app:layout_constraintStart_toEndOf="@+id/subSeatsButton"
-        app:layout_constraintTop_toTopOf="@id/addSeatsButton"
-        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
