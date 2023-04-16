@@ -15,7 +15,6 @@ class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val movieSeatsRemaining: TextView = itemView.findViewById(R.id.movieSeatsRemaining)
     private val movieSeatIcon: ImageView = itemView.findViewById(R.id.movieSeatsImage)
 
-    // Bind the data to the views in the layout
     fun bind(movie: Movie) {
 
         // Load the image using Picasso library
@@ -38,7 +37,7 @@ class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             }
             movie.seats_remaining == 0 -> {
                 movieSeatsRemaining.text = itemView.context.getString(R.string.sold_out)
-                movieSeatsRemaining.setTextColor(Color.parseColor("#CAC4D0"))
+                movieSeatsRemaining.setTextColor(Color.parseColor("#FFAAAA"))
                 movieSeatIcon.clearColorFilter()
             }
             else -> {

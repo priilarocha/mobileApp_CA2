@@ -23,14 +23,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Load the hero image using Picasso and a random seed to get a different image each time the app is opened
-//        val heroImage = findViewById<ImageView>(R.id.recyclerImage)
-//        val randomSeed = Random.nextInt(1000)
-//        val url2 = "https://picsum.photos/seed/$randomSeed/2080/920?grayscale&blur=10"
-//        Picasso.get().load(url2).into(heroImage)
-
-        //Created JSON file on Gist
-        val url = "https://gist.githubusercontent.com/priilarocha/06a701cc3ff144890a6227892727e066/raw/8fc535959bbf44a6dcd91833884d80e7ba44ddbc/movie.json"
+        //Using my json file that was created on gist
+        val url = "https://gist.githubusercontent.com/priilarocha/06a701cc3ff144890a6227892727e066/raw/ba7a10388e85d73e903df8ed0a1bd1b48300d099/movie.json"
 
         // Create the adapter and pass in the click listener lambda function
         movieAdaptor = MovieAdaptor(emptyList()) { movie ->

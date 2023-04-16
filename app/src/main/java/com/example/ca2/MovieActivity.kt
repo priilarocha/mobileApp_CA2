@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 import com.squareup.picasso.Picasso
 
+@Suppress("DEPRECATION")
 class MovieActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,14 +63,6 @@ class MovieActivity : AppCompatActivity() {
         } else {
             movieSeatsRemaining.text = getString(R.string.seats_remaining, movie.seats_remaining)
         }
-
-//        // Set back button click listener to pass the updated movie object back to the main activity
-//        backButton.setOnClickListener {
-//            val resultIntent = Intent()
-//            resultIntent.putExtra("updatedMovie", movie)
-//            setResult(Activity.RESULT_OK, resultIntent)
-//            finish()
-//        }
 
         // function to update the button state, so if the seats remaining is 0, the plus button is disabled
         fun updateButtonStates() {

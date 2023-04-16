@@ -1,8 +1,6 @@
 package com.example.ca2
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -30,6 +28,7 @@ class MovieAdaptor(private var moviesArray: List<Movie>, private val onItemClick
         notifyDataSetChanged()
     }
 
+    // This function is called when the user selects a movie
     fun updateMovie(updatedMovie: Movie) {
         val index = moviesArray.indexOfFirst { it.id == updatedMovie.id }
         if (index != -1) {
@@ -41,6 +40,7 @@ class MovieAdaptor(private var moviesArray: List<Movie>, private val onItemClick
     }
 }
 
+//-------------------test-------------------
 //    override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
 //            holder.movieTitleTextView.text = moviesArray[position].title
 //            holder.movieStarNameTextView.text = moviesArray[position].stars

@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="335dp">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/movieImage"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="245dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:text="Running time "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/movieStar"/>
+        app:layout_constraintTop_toBottomOf="@id/movieStarName"/>
 
     <TextView
         android:id="@+id/movieTimeValue"
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:text="Seats Remaining"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/movieStarName"
+        app:layout_constraintTop_toTopOf="@id/movieTimeValue"
         app:layout_constraintVertical_bias="0.9" />
     
     <ImageView
@@ -84,7 +84,8 @@
         app:layout_constraintBottom_toBottomOf="@id/movieSeatsRemaining"
         app:layout_constraintEnd_toStartOf="@id/movieSeatsRemaining"
         app:layout_constraintTop_toTopOf="@id/movieSeatsRemaining"
-        app:srcCompat="@drawable/baseline_chair_24" />
+        app:srcCompat="@drawable/baseline_chair_24"
+        android:contentDescription="This is the chair symbol" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
